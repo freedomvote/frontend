@@ -1,0 +1,45 @@
+// Config
+$navigation-bgcolor: $color-alpha
+$navigation-divider-color: $color-white
+$menu-item-color: $color-white
+$language-item-color: $color-white
+
+.navigation
+  width: 100%
+  background-color: $navigation-bgcolor
+
+  &__nav
+    padding: 37px 100px
+    height: 32px
+    display: flex
+    flex-direction: row
+    align-items: center
+  &__logo
+    width: 250px
+
+  &__divider
+    height: 22px
+    border: solid 1px $navigation-divider-color
+
+  &__language
+    .language
+      list-style: none
+      &__item
+        color: $language-item-color
+        display: none
+        &--active
+          display: block
+
+  &__search
+  .menu
+    margin-left: auto
+    display: flex
+    list-style-type: none
+    &__item
+      a
+        +font-droid(17px, $menu-item-color, normal, 0.6px, 0px)
+        text-decoration: none
+        padding: 0 1rem
+      &--active
+        a
+          font-weight: 600

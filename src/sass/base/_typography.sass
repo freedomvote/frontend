@@ -1,0 +1,38 @@
+@import 'https://fonts.googleapis.com/css?family=Droid+Sans:400,700'
+//Config
+$hero-color: $color-black !default
+$headline-color: $color-grey !default
+$headline-fancy-bgcolor: $color-alpha !default
+$paragraph-color: $color-dark-grey !default
+
+=font-droid($size: false, $color: false, $weight: false, $ls: false, $lh: false)
+  font-family: $base-font-family
+  font-style: normal
+  font-stretch: normal
+  @if $color
+    color: $color
+  @if $ls
+    letter-spacing: $ls
+  @if $size
+    font-size: $size
+  @if $weight
+    font-weight: $weight
+  @if $lh
+    line-height: $lh
+
+.hero
+  +font-droid(36px, $hero-color, bold, 1.2px)
+
+.headline
+  +font-droid(24px, $headline-color, normal, 0.8px)
+  &--fancy
+    &:after
+      content: " "
+      display: block
+      margin-top: 15px
+      width: 38px
+      height: 3px
+      background-color: $headline-fancy-bgcolor
+
+p
+  +font-droid(18px, $paragraph-color, normal, 1.2px, 35px)
