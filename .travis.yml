@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - "node"
+script: gulp sass
+deploy:
+  provider: surge
+  project: ./public/
+  domain: freedomvote_master.surge.sh
+  on: master
+  skip_cleanup: true
