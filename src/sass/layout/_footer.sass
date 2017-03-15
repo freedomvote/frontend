@@ -1,0 +1,55 @@
+$footer-menu-color: $base-text-font-color
+$address-color: $base-text-font-color
+$link-item-color: $base-text-font-color
+
+.footer
+  .section
+    display: flex
+    flex-direction: row
+    align-items: center
+  .info
+    width: 50%
+    display: flex
+    flex-direction: column
+    text-align: left
+    img
+      width: 183px
+      padding-bottom: 28px
+    address
+      +font-droid(15px, $address-color, normal, 1px, 1.8)
+  .link
+    width: 50%
+    display: flex
+    flex-direction: row
+    justify-content: flex-end
+    align-self: flex-end
+    list-style: none
+    &__item
+      padding-left: 49px
+      &__icon
+        font-size: 20px
+        color: #9b9b9b
+        padding-right: 3px
+      a
+        +font-droid(13px, $link-item-color, normal, 0.9px, 1px)
+        text-decoration: none
+
+.footer
+  .menu
+    width: 50%
+    list-style: none
+    display: flex
+    &__item
+      padding-right: 1rem
+      a
+        +font-droid(13px, $footer-menu-color)
+        text-decoration: none
+  .partner
+    width: 50%
+    display: flex
+    list-style: none
+    justify-content: flex-end
+    &__item
+      padding-left: 35.9px
+      img
+        height: 36px
