@@ -2,12 +2,16 @@
 $navigation-bgcolor: $color-alpha
 $navigation-divider-color: $color-white
 $menu-item-color: $color-white
+$menu-item-color-hover: smart-scale($color-alpha, -10%)
 $language-item-color: $color-white
+$language-item-bgcolor: $color-alpha
+$search-icon-color: $color-white
+$search-box-bgcolor: $color-alpha
+$search-box-element-bgcolor: $color-white
 
 .navigation
   width: 100%
   background-color: $navigation-bgcolor
-
   &__nav
     padding: 37px 100px
     height: 32px
@@ -22,24 +26,65 @@ $language-item-color: $color-white
     border: solid 1px $navigation-divider-color
 
   &__language
-    .language
-      list-style: none
-      &__item
-        color: $language-item-color
-        display: none
-        &--active
-          display: block
+    display: flex
+    align-items: baseline
+    padding-left: 28px
 
   &__search
+    padding-left: 26px
+    color: $search-icon-color
+    &__box
+      background-color: $search-box-bgcolor
+      padding: 1rem 1rem
+      visibility: hidden
+      position: absolute
+      display: flex
+      transition: top 0.1s, visibility 0.1s ease
+      top: 3rem
+      right: 0
+      button, input
+        background-color: $search-box-element-bgcolor
+        color: $navigation-bgcolor
+        border: 0
+        padding: 0.85rem 1rem
+  .search__toggle
+    display: none
+    &:checked + .navigation__search__box
+      visibility: visible
+      top: 4rem
   .menu
     margin-left: auto
     display: flex
     list-style-type: none
     &__item
-      a
+      position: relative
+      a, label
         +font-droid(17px, $menu-item-color, normal, 0.6px, 0px)
         text-decoration: none
         padding: 0 1rem
+      label
+        cursor: pointer
+        padding: 1rem 2rem
+        i
+          padding-left: 1rem
       &--active
         a
           font-weight: 600
+      .language
+        list-style: none
+        position: absolute
+        transition: visibility 1s, opacity 0.2s ease
+        background-color: $language-item-bgcolor
+        color: $language-item-color
+        visibility: hidden
+        opacity: 0
+        z-index: 100
+        &__item
+          padding: 1rem 2rem
+          &:hover
+            background-color: $menu-item-color-hover
+      .language__toggle
+        display: none
+        &:checked + .language
+          visibility: visible
+          opacity: 1

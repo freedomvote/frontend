@@ -16,18 +16,30 @@
           <li class="menu__item"><a href="#">Kandidaten</a></li>
           <li class="menu__item"><a href="#">Vergleichen</a></li>
           <li class="menu__item"><a href="#">Partner</a></li>
+          <li class="menu__item"><i class="navigation__divider"></i></li>
+          <li class="menu__item">
+            <label for="language">
+              DE<i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </label>
+            <input class="language__toggle" type="checkbox" id="language" />
+            <ul class="language nopadding">
+              <li class="language__item"><a href="#">IT</a></li>
+              <li class="language__item"><a href="#">NL</a></li>
+              <li class="language__item"><a href="#">EN</a></li>
+              <li class="language__item"><a href="#">FR</a></li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <label for="search">
+              <i class="navigation__search fa fa-search" aria-hidden="true"></i>
+            </label>
+            <input class="search__toggle" type="checkbox" id="search" />
+            <div class="navigation__search__box">
+              <input type="text" />
+              <button>Search</button>
+            </div>
+          </li>
         </ul>
-        <i class="navigation__divider"></i>
-        <nav class="navigation__language">
-          <ul class="language">
-            <li class="language__item language__item--active">DE</li>
-            <li class="language__item">IT</li>
-            <li class="language__item">NL</li>
-            <li class="language__item">EN</li>
-            <li class="language__item">FR</li>
-          </ul>
-        </nav>
-        <i class="navigation__search">Search</i>
       </nav>
     </header>
     <div class="container">
