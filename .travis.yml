@@ -8,3 +8,5 @@ deploy:
   domain: freedomvote_master.surge.sh
   on: master
   skip_cleanup: true
+notifications:
+  slack: freedomvote:gNeosPsBstvqAz4z2U8UVA0Y
