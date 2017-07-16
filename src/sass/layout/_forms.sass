@@ -1,0 +1,50 @@
+$input-bgcolor: $color-grey-alternative
+$input-color: $color-grey
+$input-border-color: $color-light-grey
+$color-form-valid: #4CAF50
+$color-form-invalid: #F44336
+
+form
+  display: flex
+  &.vertical-form
+    flex-direction: column
+
+.input-row
+  display: flex
+  flex-direction: column-reverse
+  position: relative
+  margin-bottom: 20px
+.input-column
+  display: flex
+  flex-direction: row
+
+input[type=text], select, textarea
+  margin-bottom: 20px
+  background-color: $input-bgcolor
+  color: $input-color
+  border: solid 1px $input-border-color
+  padding: 0.85rem 1rem
+  &:focus
+    outline: none
+  &.invalid+label:after, &.valid+label:after
+    opacity: 1
+  &.invalid+label:after
+    content: attr(data-error)
+    color: $color-form-invalid
+  &.valid+label:after
+    content: attr(data-success)
+    color: $color-form-valid
+
+label
+  text-align: left
+  padding-bottom: 0.5rem
+  &::after
+    display: block
+    content: ""
+    position: absolute
+    top: 5rem
+    left: 0
+    opacity: 0
+
+input[type=button], input[type=butto].button
+  width: 50%

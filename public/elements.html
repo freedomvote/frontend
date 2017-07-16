@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Freedomvote</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <header class="navigation">
+      <nav class="navigation__nav">
+        <a href="#">
+          <img class="navigation__logo" src="/img/logo.svg" />
+        </a>
+        <ul class="menu">
+          <li class="menu__item menu__item--active"><a href="index.html">Home</a></li>
+          <li class="menu__item"><a href="elements.html">Elements</a></li>
+          <li class="menu__item"><a href="#">Kandidaten</a></li>
+          <li class="menu__item"><a href="#">Vergleichen</a></li>
+          <li class="menu__item"><a href="#">Partner</a></li>
+          <li class="menu__item"><i class="navigation__divider"></i></li>
+          <li class="menu__item">
+            <label for="language">
+              DE<i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </label>
+            <input class="language__toggle" type="checkbox" id="language" />
+            <ul class="language nopadding">
+              <li class="language__item"><a href="#">IT</a></li>
+              <li class="language__item"><a href="#">NL</a></li>
+              <li class="language__item"><a href="#">EN</a></li>
+              <li class="language__item"><a href="#">FR</a></li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <label for="search">
+              <i class="navigation__search fa fa-search" aria-hidden="true"></i>
+            </label>
+            <input class="search__toggle" type="checkbox" id="search" />
+            <div class="navigation__search__box">
+              <input type="text" />
+              <button>Search</button>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <section class="section">
+        <form class="vertical-form" action="#" method="GET">
+          <div class="input-row">
+            <input class="validate valid" id="forename" placeholder="John" type="text" name="forename">
+            <label for="forename" data-error="Invalid forename" data-success="This looks OK!">Forename</label>
+          </div>
+          <div class="input-row">
+            <input class="validate invalid" id="surname" placeholder="Doe" type="text" name="surname">
+            <label for="surname" data-error="Invalid surname" data-success="This looks OK!">Surname</label>
+          </div>
+          <div class="input-row">
+            <select id="country">
+              <option value="ch">Switzerland</option>
+              <option value="de">Germany</option>
+              <option value="fr">France</option>
+            </select>
+            <label for="country" data-error="Invalid country" data-success="This looks OK!">Country</label>
+          </div>
+          <div class="input-row">
+            <select id="district">
+              <optgroup label="Bern">
+                <option value="ch_be_bern">Stadt Bern</option>
+                <option value="ch_be_fraubrunnen">Fraubrunnen</option>
+                <option value="ch_be_burgdorf">Burgdorf</option>
+                <option value="ch_be_thun">Thun</option>
+              </optgroup>
+              <optgroup label="Zürich">
+                <option value="ch_zh_zuerich">Stadt Zürich</option>
+                <option value="ch_zh_oerlikon">Oerlikon</option>
+                <option value="ch_zh_dietikon">Dietikon</option>
+              </optgroup>
+            </select>
+            <label for="district" data-error="Invalid district" data-success="This looks OK!">District</label>
+          </div>
+          <div class="input-row">
+            <textarea id="description" cols="5" rows="5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non sollicitudin lorem. Donec pulvinar, arcu a sagittis aliquet, ipsum nisl euismod elit, non consequat nulla nisl eget ligula. Pellentesque at gravida nunc. Phasellus ornare urna sit amet enim ultricies eleifend.</textarea>
+            <label for="description" data-error="Invalid country" data-success="This looks OK!">Description</label>
+          </div>
+          <div class="input-column">
+            <input type="button" class="button button--default" value="Save">
+            <input type="button" class="button button--grey" value="Cancel">
+          </div>
+        </form>
+      </section>
+      <section class="section">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Forename</th>
+              <th>Surname</th>
+              <th>Country</th>
+              <th>District</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Hans</td>
+              <td>Meier</td>
+              <td>Switzerland</td>
+              <td>Stadt Bern</td>
+            </tr>
+            <tr>
+              <td>Peter</td>
+              <td>Messer</td>
+              <td>Switzerland</td>
+              <td>Fraubrunnen</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="table table--striped">
+          <thead>
+            <tr>
+              <th>Forename</th>
+              <th>Surname</th>
+              <th>Country</th>
+              <th>District</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Hans</td>
+              <td>Meier</td>
+              <td>Switzerland</td>
+              <td>Stadt Bern</td>
+            </tr>
+            <tr>
+              <td>Peter</td>
+              <td>Messer</td>
+              <td>Switzerland</td>
+              <td>Fraubrunnen</td>
+            </tr>
+            <tr>
+              <td>Franz</td>
+              <td>Müller</td>
+              <td>Switzerland</td>
+              <td>Burgdorf</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+    <footer class="footer">
+      <div class="section">
+        <div class="info">
+          <img alt="Freedomvote Logo" src="/img/logo_alpha.svg" />
+          <address class="address">
+            <b>Swiss Open Systems User Group</b><br>
+            Nicolas Christener<br>
+            fredomvote@freedomvote.ch<br>
+            8000 Zürich
+          </address>
+        </div>
+        <ul class="link nopadding">
+          <li class="link__item">
+            <i class="link__item__icon fa fa-github" aria-hidden="true"></i>
+            <a href="#">
+              Quellcode auf GitHub
+            </a>
+          </li>
+          <li class="link__item">
+            <i class="link__item__icon fa fa-code"></i>
+            <a href="#">
+              API
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="section section--small section--bordertop">
+        <ul class="menu nopadding">
+          <li class="menu__item"><a href="#">Impressum</a></li>
+          <li class="menu__item"><a href="#">Kontakt</a></li>
+          <li class="menu__item"><a href="#">Partner</a></li>
+        </ul>
+        <ul class="partner nopadding">
+          <li class="partner__item">
+            <img alt="Free Software Foundation Europe" src="img/fsfe_logo.png" />
+          </li>
+          <li class="partner__item">
+            <img alt="Free Software Foundation Europe" src="img/fsfe_logo.png" />
+          </li>
+          <li class="partner__item">
+            <img alt="Free Software Foundation Europe" src="img/fsfe_logo.png" />
+          </li>
+          <li class="partner__item">
+            <img alt="Free Software Foundation Europe" src="img/fsfe_logo.png" />
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

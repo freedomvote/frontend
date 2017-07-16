@@ -1,1 +1,27 @@
+$button-default-bgcolor: $color-alpha
+$button-default-color: $color-white
+$button-default-border: $color-light-grey
+
+$button-transparent-bgcolor: transparent
+$button-transparent-color: $color-white
+$button-transparent-border: $color-white
+
+$button-grey-bgcolor: $color-grey
+$button-grey-color: $color-white
+$button-grey-border: $color-grey
+
 .button
+  border-radius: 6px
+  padding: 0.85rem 1rem
+  &--default
+    background-color: $button-default-bgcolor
+    color: $button-default-color
+    border: solid 1px $button-default-border
+  &--transparent
+    background-color: $button-transparent-bgcolor
+    color: $button-transparent-color
+    border: solid 2px $button-transparent-border
+  &--grey
+    background-color: $button-grey-bgcolor
+    color: $button-grey-color
+    border: solid 2px $button-grey-border
